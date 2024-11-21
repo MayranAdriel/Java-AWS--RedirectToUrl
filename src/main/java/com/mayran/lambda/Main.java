@@ -62,6 +62,10 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Obj
             return response;
         }
 
-        return Map.of();
+        Map<String, Object> response = new HashMap<>();
+        response.put("statusCode", 410);
+        response.put("body", "A URL expirou");
+
+        return response;
     }
 }
